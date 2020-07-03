@@ -1,9 +1,6 @@
 <div class="row">
     <div class="col-lg-12">
-        <h1> Analisis <small> Data penginap 2020 </small></h1>
-        <ol class="Breadcrumb">
-            <li class="active"> Grafik Penginap</li>
-        <ol>
+        <h1 align="Center"> Analisis Data penginap 2020</h1>
     </div>
 </div>
 
@@ -34,7 +31,7 @@
         text: 'Jumlah Penginap Tahun 2020'
     },
     xAxis: {
-        categories: ['1750', '1800', '1850', '1900', '1950', '1999', '2050'],
+        categories: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli'],
         tickmarkPlacement: 'on',
         title: {
             enabled: false
@@ -46,13 +43,13 @@
         },
         labels: {
             formatter: function() {
-                return this.value / 1000;
+                return this.value;
             }
          }
     },
     tooltip: {
         split: true,
-        valueSuffix: ' millions'
+        valueSuffix: 'Orang'
     },
     plotOptions: {
         area: {
@@ -66,8 +63,8 @@
          }
      },
     series: [{
-        name: 'Asia',
-        data: [502, 635, 809, 947, 1402, 3634, 5268]
+        name: 'Jumlah Penginap',
+        data: [100, 125, 60, 75, 89, 35, 40]
     }]
 });
 </script>

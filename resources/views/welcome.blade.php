@@ -45,7 +45,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/penginap') }}">Check DashBoard</a>
+                        <a href="{{ url('/penginap') }} " class="btn btn-primary">Check DashBoard</a>
                     @else
                         <a href="{{ route('login') }}" class="btn btn-primary">Login</a>
 

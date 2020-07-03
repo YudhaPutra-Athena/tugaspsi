@@ -26,5 +26,8 @@ Route::get('/penginap/edit/{id}','PenginapController@edit');
 Route::post('/penginap/update','PenginapController@update');
 Route::get('/penginap/hapus/{id}','PenginapController@hapus');
 
+//LogOut
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
 //grafik
 Route::get('/grafik','GrafikController@grafik');
