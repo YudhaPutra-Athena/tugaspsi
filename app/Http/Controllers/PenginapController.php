@@ -9,8 +9,16 @@ class PenginapController extends Controller
 {
     public function index()
     {
-    	// mengambil data dari table warga
-    	$penginap = DB::table('penginap')->get();
+        // mengambil data dari table warga
+        
+        $penginap = DB::table('penginap')->get();
+        
+        //$dataPenginapTiapBulan = array();
+        //for($i = 1; $i <= 12; $i++){
+        //   $dataPenginapTiapBulan[] = $penginap = DB::table('penginap')
+        //     ->whereMonth('tanggal', $i)
+        //     ->get();
+        // }
  
     	// mengirim data warga ke view index
         return view('index',['penginap' => $penginap]);
@@ -28,6 +36,7 @@ class PenginapController extends Controller
         DB::table('penginap')->insert([
             'nama' => $request->nama,
             'umur' => $request->umur,
+            'tanggal' => $request->tanggal,
         ]);
         // alihkan halaman ke halaman penginap
         return redirect('/penginap');
@@ -46,7 +55,8 @@ class PenginapController extends Controller
 	    // update data penginap
 	    DB::table('penginap')->where('id',$request->id)->update([
 	    	'nama' => $request->nama,
-	    	'umur' => $request->umur,
+            'umur' => $request->umur,
+            'tanggal' => $request->tanggal,
 	    ]);
 	    // alihkan halaman ke halaman pegawai
 	    return redirect('/penginap');

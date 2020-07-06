@@ -56,13 +56,16 @@
                 <div class="form-label-group">
                   <input type="text" name="nama" required="required">
                   <label for="Nama">Nama</label>
-    
                 </div> 
  
                 <div class="form-label-group">
                   <input type="number" name="umur" required="required">
                   <label for="umur">Umur</label>
+                </div>
 
+                <div class="form-label-group">
+                  <input type="date" name="tanggal" required="required">
+                  <label for="tanggal">Tanggal</label>
                 </div>
  
                 <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Tambah</button>

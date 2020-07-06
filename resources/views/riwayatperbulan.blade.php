@@ -44,9 +44,9 @@
 		</div>
 		<div class="divider"></div>
 		<ul class="nav menu">
-			<li class="active"><a href="/penginap"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
-			<li><a href="/riwayatperbulan"><em class="fa fa-dashboard">&nbsp;</em> Riwayat Perbulan</a></li>
-			<li><a href="/grafik"><em class="fa fa-bar-chart">&nbsp;</em> Charts</a></li>	
+			<li><a href="/penginap"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
+			<li class="active"><a href="/riwayatperbulan"><em class="fa fa-dashboard">&nbsp;</em> Riwayat Perbulan</a></li>
+			<li><a href="/grafik"><em class="fa fa-bar-chart">&nbsp;</em> Charts</a></li>
 			<li><a href="{{ route('logout') }}"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
 		</ul>
 	</div><!--/.sidebar-->
@@ -67,8 +67,7 @@
 			</div>
 		</div><!--/.row-->
 		
-		<div class="panel panel-container">
-			<div class="row">
+		<div class="row">
 				<fieldset>
           			<legend>Penginap Homestay Jogja Migunani 2020</legend>
 					  <table border='1'>
@@ -78,7 +77,6 @@
 								<th>Nama</th>
 								<th>Umur</th>
 								<th>Tanggal</th>
-								<th>Opsi</th>
 							</tr>
 							@foreach($penginap as $p)
 							<tr>
@@ -86,20 +84,38 @@
 								<td>{{ $p->nama }}</td>
 								<td>{{ $p->umur }}</td>
 								<td>{{ $p->tanggal}}</td>
-								<td>
-									<a href="/penginap/edit/{{ $p->id }}">Edit</a>
-									|
-									<a href="/penginap/hapus/{{ $p->id }}">Hapus</a>
-								</td>
 							</tr>
 							@endforeach
 					</table>
 				</fieldset>
-				<br>
-				<a href="/penginap/tambah" class="btn btn-primary"> + Tambah Penginap Baru</a>
-			</div>
-		</div><!--/.col-->
+		</div>
 
+		<div class="row">
+				<fieldset>
+          			<legend>Penginap Homestay Jogja Migunani 2020</legend>
+					  <table border='1'>
+						<center>  <table border='1' width='500'> </center>
+							<tr bgcolor='	#808080' align='right'>
+								<th>No</th>
+								<th>Nama</th>
+								<th>Umur</th>
+								<th>Tanggal</th>
+							</tr>
+							@foreach($penginap as $p)
+							<tr>
+								<td>{{ $p->id }}</td>
+								<td>{{ $p->nama }}</td>
+								<td>{{ $p->umur }}</td>
+								<td>{{ $p->tanggal}}</td>
+							</tr>
+							@endforeach
+					</table>
+				</fieldset>
+		</div>
+		
+
+		
+		<!--/.row-->
 <!-- 		<div class="col-sm-12">
 				<p class="back-link">Lumino Theme by <a href="https://www.medialoot.com">Medialoot</a></p>
 			</div> -->

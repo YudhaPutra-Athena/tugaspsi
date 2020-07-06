@@ -44,6 +44,7 @@
 										<input type="hidden" name="id" value="{{ $p->id }}"> <br/>
 											Nama : <input type="text" required="required" name="nama" value="{{ $p->nama }}"> <br/>
 											Umur : <input type="number" required="required" name="umur" value="{{ $p->umur }}"> <br/>
+											Tanggal : <input type="date" required="required" name="tanggal" value="{{ $p->tanggal }}"> <br/>
 										<input type="submit" value="Simpan Data">
 									</form>
 								@endforeach

@@ -48,7 +48,7 @@
          }
     },
     tooltip: {
-        split: true,
+        split: false,
         valueSuffix: 'Orang'
     },
     plotOptions: {
