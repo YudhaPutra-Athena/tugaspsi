@@ -1,54 +1,97 @@
-<!DOCTYPE html>
+<!-- <html>
+  <head> 
+  Tambah Data Penginap 
+  </head>
+
+  <body>
+    <br>
+      <a href="/penginap" class="btn btn-primary"> Kembali</a>
+	      <br/>
+	      <br/>
+          <fieldset>
+            <legend> <h3>Tambah Data Penginap Jogja Migunani 2020 </h3> </legend>
+		          <tr bgcolor='	#808080' align='center'>
+	              <form action="/penginap/store" method="post">
+		            {{ csrf_field() }}
+		              Nama : <input type="text" name="nama" required="required"> <br/>
+		              Umur : <input type="number" name="umur" required="required"> <br/>
+		              <input type="submit" value="Simpan Data">
+	              </form>
+	          </tr>
+        </fieldset>
+  </body>
+</html>
+  -->
+
+  <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
- 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="Your page description here" />
-  		<meta name="author" content="" />
+<head>
+<title>Edit Penginap</title>
+ 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="csrf-token" content="{{ csrf_token() }}">
+<!--Bootsrap 4 CDN-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{{url('style.css')}}">
 
-  		<!-- css utama -->
-  		<link href="css/bootstrap.css" rel="stylesheet" />
-  		<link href="css/bootstrap-responsive.css" rel="stylesheet" />
-  		<link href="css/prettyPhoto.css" rel="stylesheet" />
-  		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-  		<link href="css/style.css" rel="stylesheet">
+ 
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row no-gutter">
+    <div class="col-md-8 col-lg-6">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-lg-8 mx-auto">
+			<h3 class="login-heading mb-4">Edit Data Penginap</h3>
+			@foreach($penginap as $p)
+               <form action="/penginap/update" method="post">
+				 {{ csrf_field() }}
+				 
+						<!-- id hidden input-->
+						<div class="form-group">
+							<input type="hidden" name="id" value="{{ $p->id }}"> <br/>
+						</div>
 
-  		<!-- css file asset iconic -->
-  		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  		<link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-  		<link rel="stylesheet" href="assets/css/styles.css"> 
-
-  		<!-- Theme skin -->
-  		<link id="t-colors" href="color/default.css" rel="stylesheet" />
-
-  		<!-- Fav and touch icons -->
-  		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png" />
-  		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />
-  		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
-  		<link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
-  		<link rel="shortcut icon" href="ico/favicon.png" />
-  
-  		<title>StayManaged - Jogja Migunani</title>
-
-	</head>
-	
-	<body>
-  		@include('include.header')
-			<a href="/penginap" class="btn btn-primary"> Kembali</a>
-			<fieldset>
-         		<legend> <h3>Edit Data Penginap Jogja Migunani 2020 </h3> </legend>
-							<tr bgcolor='	#808080' align='center'>
-								@foreach($penginap as $p)
-									<form action="/penginap/update" method="post">
-									{{ csrf_field() }}
-										<input type="hidden" name="id" value="{{ $p->id }}"> <br/>
-											Nama : <input type="text" required="required" name="nama" value="{{ $p->nama }}"> <br/>
-											Umur : <input type="number" required="required" name="umur" value="{{ $p->umur }}"> <br/>
-											Tanggal : <input type="date" required="required" name="tanggal" value="{{ $p->tanggal }}"> <br/>
-										<input type="submit" value="Simpan Data">
-									</form>
-								@endforeach
-							</tr>
-			</fieldset>
-	</body>
+						<!-- Name input-->
+						<div class="form-group">
+							<label class="col-md-3 control-label" for="name">Nama</label>
+							<div class="col-md-9">
+								<input type="text" required="required" name="nama" value="{{ $p->nama }}" class="form-control">
+							</div>
+						</div>
+					
+						<!-- Email input-->
+						<div class="form-group">
+							<label class="col-md-3 control-label" for="email">Umur</label>
+							<div class="col-md-9">
+								<input type="number" required="required" name="umur" value="{{ $p->umur }}" class="form-control">
+							</div>
+						</div>
+						
+						<!-- Message body -->
+						<div class="form-group">
+							<label class="col-md-3 control-label" for="email">Tanggal</label>
+							<div class="col-md-9">
+								<input type="date" required="required" name="tanggal" value="{{ $p->tanggal }}" class="form-control">
+							</div>
+						</div>
+						
+                <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" value="Simpan Data" >Simpan </button>
+			 	</form>
+			  @endforeach
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+</body>
 </html>
