@@ -32,8 +32,6 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 //riwayat
 Route::get('/riwayatperbulan','RiwayatController@bulan');
 
-// Route::get('/riwayatperbulan','RiwayatController@bulan2');
-
 //grafik
 Route::get('/grafik','GrafikController@grafik');
 

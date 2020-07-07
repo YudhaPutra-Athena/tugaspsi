@@ -67,13 +67,13 @@
 			</div>
 		</div><!--/.row-->
 		
-		
-		<div class="row">
+		<div class="panel panel-container">
+			<div class="row">
 				<fieldset>
           			<legend>Penginap Homestay Jogja Migunani Januari 2020</legend>
 					  <table border='1'>
-						<center>  <table border='1' width='500'> </center>
-							<tr bgcolor='	#808080' align='right'>
+						<center>  <table border='5' width='900'> </center>
+							<tr bgcolor='	#68c8de' align='right'>
 								<th>No</th>
 								<th>Nama</th>
 								<th>Umur</th>
@@ -89,14 +89,16 @@
 							@endforeach
 					</table>
 				</fieldset>
-		</div>
+			</div>
+	
 
-		<div class="row">
+			<div class="row">
+				</br>
 				<fieldset>
           			<legend>Penginap Homestay Jogja Migunani Februari 2020</legend>
 					  <table border='1'>
-						<center>  <table border='1' width='500'> </center>
-							<tr bgcolor='	#808080' align='right'>
+						<center>  <table border='5' width='900'> </center>
+							<tr bgcolor='	#68c8de' align='right'>
 								<th>No</th>
 								<th>Nama</th>
 								<th>Umur</th>
@@ -112,6 +114,128 @@
 							@endforeach
 					</table>
 				</fieldset>
+			</div>
+
+			<div class="row">
+				</br>
+				<fieldset>
+          			<legend>Penginap Homestay Jogja Migunani Maret 2020</legend>
+					  <table border='1'>
+						<center>  <table border='5' width='900'> </center>
+							<tr bgcolor='	#68c8de' align='right'>
+								<th>No</th>
+								<th>Nama</th>
+								<th>Umur</th>
+								<th>Tanggal</th>
+							</tr>
+							@foreach($penginapC as $p3)
+							<tr>
+								<td>{{ $p3->id }}</td>
+								<td>{{ $p3->nama }}</td>
+								<td>{{ $p3->umur }}</td>
+								<td>{{ $p3->tanggal}}</td>
+							</tr>
+							@endforeach
+					</table>
+				</fieldset>
+			</div>
+
+			<div class="row">
+				</br>
+				<fieldset>
+          			<legend>Penginap Homestay Jogja Migunani April 2020</legend>
+					  <table border='1'>
+						<center>  <table border='5' width='900'> </center>
+							<tr bgcolor='	#68c8de' align='right'>
+								<th>No</th>
+								<th>Nama</th>
+								<th>Umur</th>
+								<th>Tanggal</th>
+							</tr>
+							@foreach($penginapD as $p4)
+							<tr>
+								<td>{{ $p4->id }}</td>
+								<td>{{ $p4->nama }}</td>
+								<td>{{ $p4->umur }}</td>
+								<td>{{ $p4->tanggal}}</td>
+							</tr>
+							@endforeach
+					</table>
+				</fieldset>
+			</div>
+
+			<div class="row">
+				</br>
+				<fieldset>
+          			<legend>Penginap Homestay Jogja Migunani Mei 2020</legend>
+					  <table border='1'>
+						<center>  <table border='5' width='900'> </center>
+							<tr bgcolor='	#68c8de' align='right'>
+								<th>No</th>
+								<th>Nama</th>
+								<th>Umur</th>
+								<th>Tanggal</th>
+							</tr>
+							@foreach($penginapE as $p5)
+							<tr>
+								<td>{{ $p5->id }}</td>
+								<td>{{ $p5->nama }}</td>
+								<td>{{ $p5->umur }}</td>
+								<td>{{ $p5->tanggal}}</td>
+							</tr>
+							@endforeach
+					</table>
+				</fieldset>
+			</div>
+
+			<div class="row">
+				</br>
+				<fieldset>
+          			<legend>Penginap Homestay Jogja Migunani Juni 2020</legend>
+					  <table border='1'>
+						<center>  <table border='5' width='900'> </center>
+							<tr bgcolor='	#68c8de' align='right'>
+								<th>No</th>
+								<th>Nama</th>
+								<th>Umur</th>
+								<th>Tanggal</th>
+							</tr>
+							@foreach($penginapF as $p6)
+							<tr>
+								<td>{{ $p6->id }}</td>
+								<td>{{ $p6->nama }}</td>
+								<td>{{ $p6->umur }}</td>
+								<td>{{ $p6->tanggal}}</td>
+							</tr>
+							@endforeach
+					</table>
+				</fieldset>
+			</div>
+
+			<div class="row">
+				</br>
+				<fieldset>
+          			<legend>Penginap Homestay Jogja Migunani Juli 2020</legend>
+					  <table border='1'>
+						<center>  <table border='5' width='900'> </center>
+							<tr bgcolor='	#68c8de' align='right'>
+								<th>No</th>
+								<th>Nama</th>
+								<th>Umur</th>
+								<th>Tanggal</th>
+							</tr>
+							@foreach($penginapG as $p7)
+							<tr>
+								<td>{{ $p7->id }}</td>
+								<td>{{ $p7->nama }}</td>
+								<td>{{ $p7->umur }}</td>
+								<td>{{ $p7->tanggal}}</td>
+							</tr>
+							@endforeach
+					</table>
+				</fieldset>
+			</div>
+
 		</div>
 		
 

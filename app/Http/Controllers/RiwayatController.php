@@ -14,7 +14,22 @@ class RiwayatController extends Controller
                     ->get(); 
         $penginapB = DB::table('penginap')
                     ->whereMonth('tanggal', '02')
+                    ->get();
+        $penginapC = DB::table('penginap')
+                    ->whereMonth('tanggal', '03')
                     ->get(); 
-        return view('riwayatperbulan', compact('penginapA','penginapB'));
+        $penginapD = DB::table('penginap')
+                    ->whereMonth('tanggal', '04')
+                    ->get(); 
+        $penginapE = DB::table('penginap')
+                    ->whereMonth('tanggal', '05')
+                    ->get(); 
+        $penginapF = DB::table('penginap')
+                    ->whereMonth('tanggal', '06')
+                    ->get(); 
+        $penginapG = DB::table('penginap')
+                    ->whereMonth('tanggal', '07')
+                    ->get(); 
+        return view('riwayatperbulan', compact('penginapA','penginapB', 'penginapC', 'penginapD', 'penginapE', 'penginapF', 'penginapG'));
     }
 }

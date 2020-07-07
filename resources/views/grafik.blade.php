@@ -74,7 +74,7 @@
      },
     series: [{
         name: 'Jumlah Penginap',
-        data: [100, 125, 60, 75, 89, 35, 40]
+        data: [ 10,20,10,10,20,30,7]
     }]
 });
 </script>

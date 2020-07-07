@@ -37,7 +37,7 @@
 				<img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
 			</div>
 			<div class="profile-usertitle">
-				<div class="profile-usertitle-name">Admin {{ old('name', auth()->user()->name) }}</div>
+				<div class="profile-usertitle-name">Admin - {{ old('name', auth()->user()->name) }}</div>
 				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
 			</div>
 			<div class="clear"></div>
@@ -72,8 +72,8 @@
 				<fieldset>
           			<legend>Penginap Homestay Jogja Migunani 2020</legend>
 					  <table border='1'>
-						<center>  <table border='1' width='500'> </center>
-							<tr bgcolor='	#808080' align='right'>
+						<center>  <table border='3' width='900'> </center>
+							<tr bgcolor='	#68c8de' align='right'>
 								<th>No</th>
 								<th>Nama</th>
 								<th>Umur</th>
