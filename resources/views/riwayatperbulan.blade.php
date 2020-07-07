@@ -37,7 +37,7 @@
 				<img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
 			</div>
 			<div class="profile-usertitle">
-				<div class="profile-usertitle-name">Admin</div>
+				<div class="profile-usertitle-name">Admin {{ old('name', auth()->user()->name) }}</div>
 				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
 			</div>
 			<div class="clear"></div>
@@ -67,9 +67,10 @@
 			</div>
 		</div><!--/.row-->
 		
+		
 		<div class="row">
 				<fieldset>
-          			<legend>Penginap Homestay Jogja Migunani 2020</legend>
+          			<legend>Penginap Homestay Jogja Migunani Januari 2020</legend>
 					  <table border='1'>
 						<center>  <table border='1' width='500'> </center>
 							<tr bgcolor='	#808080' align='right'>
@@ -78,12 +79,12 @@
 								<th>Umur</th>
 								<th>Tanggal</th>
 							</tr>
-							@foreach($penginap as $p)
+							@foreach($penginapA as $p1)
 							<tr>
-								<td>{{ $p->id }}</td>
-								<td>{{ $p->nama }}</td>
-								<td>{{ $p->umur }}</td>
-								<td>{{ $p->tanggal}}</td>
+								<td>{{ $p1->id }}</td>
+								<td>{{ $p1->nama }}</td>
+								<td>{{ $p1->umur }}</td>
+								<td>{{ $p1->tanggal}}</td>
 							</tr>
 							@endforeach
 					</table>
@@ -92,7 +93,7 @@
 
 		<div class="row">
 				<fieldset>
-          			<legend>Penginap Homestay Jogja Migunani 2020</legend>
+          			<legend>Penginap Homestay Jogja Migunani Februari 2020</legend>
 					  <table border='1'>
 						<center>  <table border='1' width='500'> </center>
 							<tr bgcolor='	#808080' align='right'>
@@ -101,12 +102,12 @@
 								<th>Umur</th>
 								<th>Tanggal</th>
 							</tr>
-							@foreach($penginap as $p)
+							@foreach($penginapB as $p2)
 							<tr>
-								<td>{{ $p->id }}</td>
-								<td>{{ $p->nama }}</td>
-								<td>{{ $p->umur }}</td>
-								<td>{{ $p->tanggal}}</td>
+								<td>{{ $p2->id }}</td>
+								<td>{{ $p2->nama }}</td>
+								<td>{{ $p2->umur }}</td>
+								<td>{{ $p2->tanggal}}</td>
 							</tr>
 							@endforeach
 					</table>

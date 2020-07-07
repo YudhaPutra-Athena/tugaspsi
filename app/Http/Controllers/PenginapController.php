@@ -9,9 +9,11 @@ class PenginapController extends Controller
 {
     public function index()
     {
-        // mengambil data dari table warga
+        // mengambil data dari table penginap
         
-        $penginap = DB::table('penginap')->get();
+        $penginap = DB::table('penginap')
+                    ->orderBy('id')
+                    ->get();
         
         //$dataPenginapTiapBulan = array();
         //for($i = 1; $i <= 12; $i++){

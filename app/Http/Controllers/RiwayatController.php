@@ -7,27 +7,14 @@ use Illuminate\Support\Facades\DB;
 
 class RiwayatController extends Controller
 {
-    public function bulan1()
+    public function bulan()
     {
-    	// mengambil data dari table warga
-        $penginap = DB::table('penginap')
-                    ->whereMonth('tanggal', '1')
+        $penginapA = DB::table('penginap')
+                    ->whereMonth('tanggal', '01')
                     ->get(); 
-    
- 
-    	// mengirim data warga ke view index
-        return view('riwayatperbulan',['penginap' => $penginap]);
-    }
-
-    public function bulan2()
-    {
-    	// mengambil data dari table warga
-        $penginap = DB::table('penginap')
-                    ->whereMonth('tanggal', '2')
+        $penginapB = DB::table('penginap')
+                    ->whereMonth('tanggal', '02')
                     ->get(); 
-    
- 
-    	// mengirim data warga ke view index
-        return view('riwayatperbulan',['penginap' => $penginap]);
+        return view('riwayatperbulan', compact('penginapA','penginapB'));
     }
 }

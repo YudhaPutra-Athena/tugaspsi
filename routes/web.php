@@ -30,8 +30,9 @@ Route::get('/penginap/hapus/{id}','PenginapController@hapus');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 //riwayat
-Route::get('/riwayatperbulan','RiwayatController@bulan1');
-Route::get('/riwayatperbulan','RiwayatController@bulan2');
+Route::get('/riwayatperbulan','RiwayatController@bulan');
+
+// Route::get('/riwayatperbulan','RiwayatController@bulan2');
 
 //grafik
 Route::get('/grafik','GrafikController@grafik');
