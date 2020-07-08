@@ -32,4 +32,30 @@ class RiwayatController extends Controller
                     ->get(); 
         return view('riwayatperbulan', compact('penginapA','penginapB', 'penginapC', 'penginapD', 'penginapE', 'penginapF', 'penginapG'));
     }
+
+    public function hitung()
+    { 
+       $penginapA = DB::table('penginap')
+                    ->whereMonth('tanggal', '01')
+                    ->count(); 
+        $penginapB = DB::table('penginap')
+                    ->whereMonth('tanggal', '02')
+                    ->count(); 
+        $penginapC = DB::table('penginap')
+                    ->whereMonth('tanggal', '03')
+                    ->count(); 
+        $penginapD = DB::table('penginap')
+                    ->whereMonth('tanggal', '04')
+                    ->count(); 
+        $penginapE = DB::table('penginap')
+                    ->whereMonth('tanggal', '05')
+                    ->count(); 
+        $penginapF = DB::table('penginap')
+                    ->whereMonth('tanggal', '06')
+                    ->count(); 
+        $penginapG = DB::table('penginap')
+                    ->whereMonth('tanggal', '07')
+                    ->count(); 
+        return view('riwayatperbulan', compact('penginapA', 'penginapB', 'penginapC', 'penginapD', 'penginapE', 'penginapF', 'penginapG'));
+    }
 }

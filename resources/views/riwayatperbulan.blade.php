@@ -88,6 +88,9 @@
 							</tr>
 							@endforeach
 					</table>
+					Total : {{$penginapA = DB::table('penginap')
+                    ->whereMonth('tanggal', '01')
+                    ->count() }}
 				</fieldset>
 			</div>
 	
@@ -113,6 +116,9 @@
 							</tr>
 							@endforeach
 					</table>
+					Total : {{$penginapB = DB::table('penginap')
+                    		->whereMonth('tanggal', '02')
+                   			->count()}}
 				</fieldset>
 			</div>
 
@@ -137,6 +143,9 @@
 							</tr>
 							@endforeach
 					</table>
+					Total : {{$penginapC = DB::table('penginap')
+                    		->whereMonth('tanggal', '03')
+                   			->count()}}
 				</fieldset>
 			</div>
 
@@ -161,6 +170,9 @@
 							</tr>
 							@endforeach
 					</table>
+					Total : {{$penginapD = DB::table('penginap')
+                    		->whereMonth('tanggal', '04')
+                   			->count()}}
 				</fieldset>
 			</div>
 
@@ -185,6 +197,9 @@
 							</tr>
 							@endforeach
 					</table>
+					Total : {{$penginapE = DB::table('penginap')
+                    		->whereMonth('tanggal', '05')
+                   			->count()}}
 				</fieldset>
 			</div>
 
@@ -209,6 +224,9 @@
 							</tr>
 							@endforeach
 					</table>
+					Total : {{$penginapF = DB::table('penginap')
+                    		->whereMonth('tanggal', '06')
+                   			->count()}}
 				</fieldset>
 			</div>
 
@@ -233,6 +251,9 @@
 							</tr>
 							@endforeach
 					</table>
+					Total : {{$penginapG = DB::table('penginap')
+                    		->whereMonth('tanggal', '07')
+                   			->count()}}
 				</fieldset>
 			</div>
 

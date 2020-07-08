@@ -74,7 +74,28 @@
      },
     series: [{
         name: 'Jumlah Penginap',
-        data: [ 10,20,10,10,20,30,7]
+        data: [ {{$penginapA = DB::table('penginap')
+                            ->whereMonth('tanggal', '01')
+                            ->count() }},
+                {{$penginapB = DB::table('penginap')
+                            ->whereMonth('tanggal', '02')
+                   			->count()}},
+                {{$penginapC = DB::table('penginap')
+                            ->whereMonth('tanggal', '03')
+                   			->count()}},
+                {{$penginapD = DB::table('penginap')
+                            ->whereMonth('tanggal', '04')
+                   			->count()}},
+                {{$penginapE = DB::table('penginap')
+                            ->whereMonth('tanggal', '05')
+                   			->count()}},
+                {{$penginapF = DB::table('penginap')
+                            ->whereMonth('tanggal', '06')
+                   			->count()}},
+                {{$penginapG = DB::table('penginap')
+                            ->whereMonth('tanggal', '07')
+                   			->count()}}
+                            ]
     }]
 });
 </script>
