@@ -34,7 +34,7 @@
 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<div class="profile-sidebar">
 			<div class="profile-userpic">
-				<img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+			<!--	<img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt=""> -->
 			</div>
 			<div class="profile-usertitle">
 				<div class="profile-usertitle-name">Admin {{ old('name', auth()->user()->name) }}</div>
@@ -75,15 +75,21 @@
 						<center>  <table border='5' width='900'> </center>
 							<tr bgcolor='	#68c8de' align='right'>
 								<th>No</th>
+								<th>NIK</th>
 								<th>Nama</th>
+								<th>Alamat</th>
 								<th>Umur</th>
-								<th>Tanggal</th>
+								<th>Jenis Kelamin</th>
+								<th>Tanggal Booking</th>
 							</tr>
 							@foreach($penginapA as $p1)
 							<tr>
 								<td>{{ $p1->id }}</td>
+								<td>{{ $p1->nik }}</td>
 								<td>{{ $p1->nama }}</td>
+								<td>{{ $p1->alamat }}</td>
 								<td>{{ $p1->umur }}</td>
+								<td>{{ $p1->jk }}</td>
 								<td>{{ $p1->tanggal}}</td>
 							</tr>
 							@endforeach
@@ -103,15 +109,21 @@
 						<center>  <table border='5' width='900'> </center>
 							<tr bgcolor='	#68c8de' align='right'>
 								<th>No</th>
+								<th>NIK</th>
 								<th>Nama</th>
+								<th>Alamat</th>
 								<th>Umur</th>
-								<th>Tanggal</th>
+								<th>Jenis Kelamin</th>
+								<th>Tanggal Booking</th>
 							</tr>
 							@foreach($penginapB as $p2)
 							<tr>
 								<td>{{ $p2->id }}</td>
+								<td>{{ $p2->nik }}</td>
 								<td>{{ $p2->nama }}</td>
+								<td>{{ $p2->alamat }}</td>
 								<td>{{ $p2->umur }}</td>
+								<td>{{ $p2->jk }}</td>
 								<td>{{ $p2->tanggal}}</td>
 							</tr>
 							@endforeach
@@ -130,15 +142,21 @@
 						<center>  <table border='5' width='900'> </center>
 							<tr bgcolor='	#68c8de' align='right'>
 								<th>No</th>
+								<th>NIK</th>
 								<th>Nama</th>
+								<th>Alamat</th>
 								<th>Umur</th>
-								<th>Tanggal</th>
+								<th>Jenis Kelamin</th>
+								<th>Tanggal Booking</th>
 							</tr>
 							@foreach($penginapC as $p3)
 							<tr>
 								<td>{{ $p3->id }}</td>
+								<td>{{ $p3->nik }}</td>
 								<td>{{ $p3->nama }}</td>
+								<td>{{ $p3->alamat }}</td>
 								<td>{{ $p3->umur }}</td>
+								<td>{{ $p3->jk }}</td>
 								<td>{{ $p3->tanggal}}</td>
 							</tr>
 							@endforeach
@@ -157,15 +175,21 @@
 						<center>  <table border='5' width='900'> </center>
 							<tr bgcolor='	#68c8de' align='right'>
 								<th>No</th>
+								<th>NIK</th>
 								<th>Nama</th>
+								<th>Alamat</th>
 								<th>Umur</th>
-								<th>Tanggal</th>
+								<th>Jenis Kelamin</th>
+								<th>Tanggal Booking</th>
 							</tr>
 							@foreach($penginapD as $p4)
 							<tr>
 								<td>{{ $p4->id }}</td>
+								<td>{{ $p4->nik }}</td>
 								<td>{{ $p4->nama }}</td>
+								<td>{{ $p4->alamat }}</td>
 								<td>{{ $p4->umur }}</td>
+								<td>{{ $p4->jk }}</td>
 								<td>{{ $p4->tanggal}}</td>
 							</tr>
 							@endforeach
@@ -184,15 +208,21 @@
 						<center>  <table border='5' width='900'> </center>
 							<tr bgcolor='	#68c8de' align='right'>
 								<th>No</th>
+								<th>NIK</th>
 								<th>Nama</th>
+								<th>Alamat</th>
 								<th>Umur</th>
-								<th>Tanggal</th>
+								<th>Jenis Kelamin</th>
+								<th>Tanggal Booking</th>
 							</tr>
 							@foreach($penginapE as $p5)
 							<tr>
 								<td>{{ $p5->id }}</td>
+								<td>{{ $p5->nik }}</td>
 								<td>{{ $p5->nama }}</td>
+								<td>{{ $p5->alamat }}</td>
 								<td>{{ $p5->umur }}</td>
+								<td>{{ $p5->jk }}</td>
 								<td>{{ $p5->tanggal}}</td>
 							</tr>
 							@endforeach
@@ -211,15 +241,21 @@
 						<center>  <table border='5' width='900'> </center>
 							<tr bgcolor='	#68c8de' align='right'>
 								<th>No</th>
+								<th>NIK</th>
 								<th>Nama</th>
+								<th>Alamat</th>
 								<th>Umur</th>
-								<th>Tanggal</th>
+								<th>Jenis Kelamin</th>
+								<th>Tanggal Booking</th>
 							</tr>
 							@foreach($penginapF as $p6)
 							<tr>
 								<td>{{ $p6->id }}</td>
+								<td>{{ $p6->nik }}</td>
 								<td>{{ $p6->nama }}</td>
+								<td>{{ $p6->alamat }}</td>
 								<td>{{ $p6->umur }}</td>
+								<td>{{ $p6->jk }}</td>
 								<td>{{ $p6->tanggal}}</td>
 							</tr>
 							@endforeach
@@ -238,15 +274,21 @@
 						<center>  <table border='5' width='900'> </center>
 							<tr bgcolor='	#68c8de' align='right'>
 								<th>No</th>
+								<th>NIK</th>
 								<th>Nama</th>
+								<th>Alamat</th>
 								<th>Umur</th>
-								<th>Tanggal</th>
+								<th>Jenis Kelamin</th>
+								<th>Tanggal Booking</th>
 							</tr>
 							@foreach($penginapG as $p7)
 							<tr>
 								<td>{{ $p7->id }}</td>
+								<td>{{ $p7->nik }}</td>
 								<td>{{ $p7->nama }}</td>
+								<td>{{ $p7->alamat }}</td>
 								<td>{{ $p7->umur }}</td>
+								<td>{{ $p7->jk }}</td>
 								<td>{{ $p7->tanggal}}</td>
 							</tr>
 							@endforeach

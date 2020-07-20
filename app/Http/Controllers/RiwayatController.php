@@ -58,4 +58,14 @@ class RiwayatController extends Controller
                     ->count(); 
         return view('riwayatperbulan', compact('penginapA', 'penginapB', 'penginapC', 'penginapD', 'penginapE', 'penginapF', 'penginapG'));
     }
+
+    public function jk()
+    { 
+        $penginapjk1 = DB::table('penginap')
+                    ->where('jk', 'perempuan')
+                    ->count(); 
+        $penginapjk2 = DB::table('penginap')
+                    ->where('jk', 'laki-laki')
+                    ->count(); 
+    }
 }

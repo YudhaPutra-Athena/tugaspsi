@@ -36,8 +36,11 @@ class PenginapController extends Controller
     {
         // insert data ke table penginap
         DB::table('penginap')->insert([
+            'nik' => $request->nik,
             'nama' => $request->nama,
+            'alamat' => $request->alamat,
             'umur' => $request->umur,
+            'jk' => $request->jk,
             'tanggal' => $request->tanggal,
         ]);
         // alihkan halaman ke halaman penginap
@@ -56,8 +59,11 @@ class PenginapController extends Controller
     {
 	    // update data penginap
 	    DB::table('penginap')->where('id',$request->id)->update([
-	    	'nama' => $request->nama,
+            'nik' => $request->nik,
+            'nama' => $request->nama,
+            'alamat' => $request->alamat,
             'umur' => $request->umur,
+            'jk' => $request->jk,
             'tanggal' => $request->tanggal,
 	    ]);
 	    // alihkan halaman ke halaman pegawai

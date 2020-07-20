@@ -59,10 +59,25 @@
 						</div>
 
 						<!-- Name input-->
+
+						<div class="form-group">
+							<label class="col-md-3 control-label" for="nik">NIK</label>
+							<div class="col-md-9">
+								<input type="number" required="required" name="nik" value="{{ $p->nik }}" class="form-control">
+							</div>
+						</div>
+
 						<div class="form-group">
 							<label class="col-md-3 control-label" for="name">Nama</label>
 							<div class="col-md-9">
 								<input type="text" required="required" name="nama" value="{{ $p->nama }}" class="form-control">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-3 control-label" for="alamat">Alamat</label>
+							<div class="col-md-9">
+								<input type="text" required="required" name="alamat" value="{{ $p->alamat }}" class="form-control">
 							</div>
 						</div>
 					
@@ -71,6 +86,13 @@
 							<label class="col-md-3 control-label" for="email">Umur</label>
 							<div class="col-md-9">
 								<input type="number" required="required" name="umur" value="{{ $p->umur }}" class="form-control">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-3 control-label" for="jk">Jenis Kelamin</label>
+							<div class="col-md-9">
+								<input type="text" required="required" name="jk" value="{{ $p->jk }}" class="form-control">
 							</div>
 						</div>
 						

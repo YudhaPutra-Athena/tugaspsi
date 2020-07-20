@@ -52,19 +52,40 @@
                <form action="/penginap/store" method="post">
  
 				 {{ csrf_field() }}
+
+         <div class="form-group">
+					  <label class="col-md-3 control-label" for="nik">NIK</label>
+						  <div class="col-md-9">
+							  <input type="number" required="required" name="nik" class="form-control">
+					  	</div>
+				</div>
 				 
 				 <div class="form-group">
-					<label class="col-md-3 control-label" for="nama">Nama</label>
-						<div class="col-md-9">
-							<input type="text" required="required" name="nama" class="form-control">
-						</div>
+					  <label class="col-md-3 control-label" for="nama">Nama</label>
+						  <div class="col-md-9">
+							  <input type="text" required="required" name="nama" class="form-control">
+					  	</div>
+				</div>
+
+        <div class="form-group">
+					  <label class="col-md-3 control-label" for="alamat">Alamat</label>
+						  <div class="col-md-9">
+							  <input type="text" required="required" name="alamat" class="form-control">
+					  	</div>
 				</div>
  
-                <div class="form-group">
-					<label class="col-md-3 control-label" for="umur">Umur</label>
-						<div class="col-md-9">
-							<input type="number" required="required" name="umur" class="form-control">
-						</div>
+        <div class="form-group">
+					  <label class="col-md-3 control-label" for="umur">Umur</label>
+						  <div class="col-md-9">
+							  <input type="number" required="required" name="umur" class="form-control">
+						  </div>
+				</div>
+
+        <div class="form-group">
+					  <label class="col-md-3 control-label" for="jk">Jenis Kelamin</label>
+            <div class="col-md-9">
+							  <input type="text" required="required" name="jk" class="form-control">
+					  	</div>
 				</div>
 
 				<div class="form-group">

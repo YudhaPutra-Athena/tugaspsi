@@ -34,7 +34,7 @@
 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<div class="profile-sidebar">
 			<div class="profile-userpic">
-				<img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+				<!--<img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">-->
 			</div>
 			<div class="profile-usertitle">
 				<div class="profile-usertitle-name">Admin - {{ old('name', auth()->user()->name) }}</div>
@@ -75,16 +75,22 @@
 						<center>  <table border='3' width='900'> </center>
 							<tr bgcolor='	#68c8de' align='right'>
 								<th>No</th>
+								<th>NIK</th>
 								<th>Nama</th>
+								<th>Alamat</th>
 								<th>Umur</th>
-								<th>Tanggal</th>
+								<th>Jenis Kelamin</th>
+								<th>Tanggal Booking</th>
 								<th>Opsi</th>
 							</tr>
 							@foreach($penginap as $p)
 							<tr>
 								<td>{{ $p->id }}</td>
+								<td>{{ $p->nik }}</td>
 								<td>{{ $p->nama }}</td>
+								<td>{{ $p->alamat }}</td>
 								<td>{{ $p->umur }}</td>
+								<td>{{ $p->jk }}</td>
 								<td>{{ $p->tanggal}}</td>
 								<td>
 									<a href="/penginap/edit/{{ $p->id }}">Edit</a>
@@ -98,6 +104,13 @@
 				<br>
 				<a href="/penginap/tambah" class="btn btn-primary"> + Tambah Penginap Baru</a>
 			</div>
+			Total perempuan = {{$penginapjk1 = DB::table('penginap')
+                   				->where('jk', 'perempuan')
+                    			->count() }}
+
+        	Total laki-laki = {{$penginapjk2 = DB::table('penginap')
+                    			->where('jk', 'laki-laki')
+                    			->count() }}
 		</div><!--/.col-->
 
 <!-- 		<div class="col-sm-12">
