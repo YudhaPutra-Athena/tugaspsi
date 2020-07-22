@@ -72,8 +72,6 @@
 				<center>
 					<h5><a target="_blank" href="https://www.malasngoding.com/membuat-laporan-…n-dompdf-laravel/">www.malasngoding.com</a></h5>
 				</center>
-				<br/>
-				<a href="/penginap/cetak_pdf" class="btn btn-primary" target="_blank">CETAK PDF</a>
 				<fieldset>
           			<legend>Penginap Homestay Jogja Migunani 2020</legend>
 					  <table border='1'>
@@ -86,7 +84,7 @@
 								<th>Umur</th>
 								<th>Jenis Kelamin</th>
 								<th>Tanggal Booking</th>
-								<th>Opsi</th>
+								
 							</tr>
 							@foreach($penginap as $p)
 							<tr>
@@ -97,11 +95,6 @@
 								<td>{{ $p->umur }}</td>
 								<td>{{ $p->jk }}</td>
 								<td>{{ $p->tanggal}}</td>
-								<td>
-									<a href="/penginap/edit/{{ $p->id }}">Edit</a>
-									|
-									<a href="/penginap/hapus/{{ $p->id }}">Hapus</a>
-								</td>
 							</tr>
 							@endforeach
 					</table>
