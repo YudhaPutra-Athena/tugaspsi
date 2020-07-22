@@ -13,8 +13,6 @@ class penginap extends Model
    // $count1 = App\penginap::where('month', 01)->count();
    //$count1 = App\penginap::where('month', 01)
             //->count();
-    
-
-    
+        
 
 }
