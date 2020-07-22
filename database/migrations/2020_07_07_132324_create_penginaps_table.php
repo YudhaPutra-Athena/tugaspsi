@@ -13,7 +13,7 @@ class CreatePenginapsTable extends Migration
      */
     public function up()
     {
-        Schema::create('penginaps', function (Blueprint $table) {
+        Schema::create('penginap', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });

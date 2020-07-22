@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\penginap;
+use PDF;
 
 class PenginapController extends Controller
 {
@@ -77,6 +79,14 @@ class PenginapController extends Controller
 		
 	    // alihkan halaman ke halaman pegawai
 	    return redirect('/penginap');
+    }
+
+    public function cetak_pdf()
+    {
+    	$penginap = Penginap::all();
+ 
+    	$pdf = PDF::loadview('penginap_pdf',['penginap'=>$penginap]);
+    	return $pdf->download('laporan-penginap-pdf');
     }
 
 }

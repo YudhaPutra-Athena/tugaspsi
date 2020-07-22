@@ -36,4 +36,7 @@ Route::get('/riwayatperbulan','RiwayatController@bulan');
 //grafik
 Route::get('/grafik','GrafikController@grafik');
 
+//pdf
+Route::get('/penginap/cetak_pdf', 'PenginapController@cetak_pdf');
+
 

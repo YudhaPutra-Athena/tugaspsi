@@ -7,14 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class penginap extends Model
 {
    protected $table = 'penginap';
-   
-   
 
-   // $count1 = App\penginap::where('month', 01)->count();
-   //$count1 = App\penginap::where('month', 01)
-            //->count();
-    
-
-    
+   protected $fillable = ['id','nik','nama','alamat','umur','jk', 'tanggal'];
 
 }
